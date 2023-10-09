@@ -26,15 +26,8 @@ forward(50)
 left(90)
 bar("yellow")
 right(90)
-forward(50)
-left(90)
-forward(300)
-left(90)
 
-# Add line in between
-left(90)
-forward(50)
-left(90)
+
 
 
 
