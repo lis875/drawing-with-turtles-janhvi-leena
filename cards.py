@@ -91,11 +91,15 @@ def spade():
     left(45)
     back(25)
     setheading(0)
+    penup()
+    forward(100)
+    pendown()
 
 
 #### The main code that gets run
 # Only modify code below this line
 
 spade()
-
+#club()
+heart()
 done()
