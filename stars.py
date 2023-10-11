@@ -1,15 +1,18 @@
 from turtle import *
+import random
 
 ### Functions
 # Modify code in this section
 speed(0)
-
-def star():
+penup()
+left(90)
+forward(100)
+right(90)
+pendown()
+def star(radius):
     for _ in range(5):
-    # Loop to draw a single star
-        for _ in range(1):
-            forward(30)  # Move forward by 100 units
-            right(144)    # Turn right by 144 degrees
+        forward(radius)  # Move forward by 100 units
+        right(144)    # Turn right by 144 degrees
     
     # Move the turtle to the starting position for the next star
     penup()
@@ -22,7 +25,8 @@ def star():
 # Do not modify anything after this line
 
 for i in range(13):
-    star()
+    size = random.randint(10,60)
+    star(size)
     penup()
     right(360/13)
     forward(5)
