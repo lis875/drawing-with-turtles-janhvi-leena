@@ -2,7 +2,10 @@ from turtle import *
 
 #####  Functions that draw card shapes
 # Note: Do not modify any code in this section
-
+speed(0)
+penup()
+back(200)
+pendown()
 def diamond():
     fillcolor("red")
     begin_fill()
@@ -68,6 +71,7 @@ def club():
 def spade():
     setheading(0)
     begin_fill()
+    fillcolor("black")
     forward(15)
     left(120)
     forward(30)
@@ -95,24 +99,29 @@ def spade():
     forward(100)
     pendown()'''
 
-# def move_next():
-#     penup()
-#     forward(100)
-#     pendown()
+def move_next():
+    penup()
+    forward(100)
+    pendown()
 
 #### The main code that gets run
 # Only modify code below this line
-suits=textinput("Suit","Please select the suit: ")
-if suits.lower()=="spade": 
-    spade()
-elif suits.lower() == "heart":
-    heart()
-elif suits.lower() == "club":
-    club()
-elif suits.lower() == "diamond":
-    diamond()       
-else:
-    print("Try Again")
+for i in range(5):
+    suits=textinput("Suit","Please select the suit: ")
+    if suits.lower()=="spade": 
+        spade()
+        move_next()
+    elif suits.lower() == "heart":
+        heart()
+        move_next()
+    elif suits.lower() == "club":
+        club()
+        move_next()
+    elif suits.lower() == "diamond":
+        diamond()
+        move_next()       
+    else:
+        print("Try Again")
 
 
 done()
