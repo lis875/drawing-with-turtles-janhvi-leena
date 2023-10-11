@@ -95,18 +95,24 @@ def spade():
     forward(100)
     pendown()'''
 
-def move_next():
-    penup()
-    forward(100)
-    pendown()
+# def move_next():
+#     penup()
+#     forward(100)
+#     pendown()
 
 #### The main code that gets run
 # Only modify code below this line
-spade()
-move_next()
-heart()
-move_next()
-diamond()
-move_next()
-club()
+suits=textinput("Suit","Please select the suit: ")
+if suits.lower()=="spade": 
+    spade()
+elif suits.lower() == "heart":
+    heart()
+elif suits.lower() == "club":
+    club()
+elif suits.lower() == "diamond":
+    diamond()       
+else:
+    print("Try Again")
+
+
 done()
